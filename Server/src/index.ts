@@ -1,18 +1,13 @@
 import express from 'express'
-const router = express.Router()
+import userRouters from './routes/users.routes'
+import databaseServices from './services/database.services'
+const app = express()
+const port = 3000
 
-// middleware that is specific to this router
-router.use((req, res, next) => {
-  console.log('Time: ', Date.now())
-  next()
-})
-// define the home page route
-router.get('/', (req, res) => {
-  res.send('Birds home page')
-})
-// define the about route
-router.get('/about', (req, res) => {
-  res.send('About birds')
-})
+app.use(express.json()) // middleware
+app.use('/users', userRouters)
+databaseServices.connect()
 
-module.exports = router
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
