@@ -1,0 +1,21 @@
+export const userResponseMessage = {
+  VALIDATION_ERROR: 'Validation error',
+  EMAIL_ALREADY_EXISTS: 'Email already exists',
+  EMAIL_INVALID: 'Email is invalid',
+  EMAIL_NOT_FOUND: 'Email not found',
+  PASSWORD_NOT_MATCH: 'Password not match',
+  PASSWORD_LENGTH: 'Password must be between 8 and 20 characters',
+  PASSWORD_INCORRECT: 'Password is incorrect',
+  USER_NOT_FOUND: 'User not found',
+  USER_NOT_AUTHORIZED: 'User not authorized',
+  USER_NAME_LENGTH: 'Name must be between 3 and 50 characters',
+  DOB_ISO_8601: 'Date of birth must be in ISO 8601 format',
+  LOGIN_SUCCESS: 'Login success',
+  TOKEN_INVALID: 'Token invalid',
+  LOGOUT_SUCCESS: 'Logout successfully',
+  EMAIL_VERIFIED: 'Email verified',
+  EMAIL_RESENT: 'Email resent',
+  FORGOT_PASSWORD_SUCCESS: 'Forgot password successfully',
+  RESET_PASSWORD_SUCCESS: 'Reset password successfully',
+  GET_PROFILE_SUCCESS: 'Get profile successfully'
+} as const
